@@ -1,0 +1,39 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.example:gpu-recommendation-system >----------------
+[INFO] Building gpu-recommendation-system 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.4:run (default-cli) > test-compile @ gpu-recommendation-system >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ gpu-recommendation-system ---
+[INFO] skip non existing resourceDirectory C:\SideProject\ai-stack-t2\backend\src\src\main\resources
+[INFO] skip non existing resourceDirectory C:\SideProject\ai-stack-t2\backend\src\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ gpu-recommendation-system ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ gpu-recommendation-system ---
+[INFO] skip non existing resourceDirectory C:\SideProject\ai-stack-t2\backend\src\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ gpu-recommendation-system ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.4.4:run (default-cli) < test-compile @ gpu-recommendation-system <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.4:run (default-cli) @ gpu-recommendation-system ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.250 s
+[INFO] Finished at: 2025-03-29T15:18:42+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.4:run (default-cli) on project gpu-recommendation-system: Unable to find a suitable main class, please add a 'mainClass' property -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- 深色漸變背景 -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2027" />
+      <stop offset="50%" stop-color="#203A43" />
+      <stop offset="100%" stop-color="#2C5364" />
+    </linearGradient>
+    
+    <!-- 網格線條模式 -->
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#2c97d4" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    
+    <!-- 中央圓形光暈 -->
+    <radialGradient id="radial-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#2196F3" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#2196F3" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景矩形 -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)" />
+  
+  <!-- 網格圖案覆蓋 -->
+  <rect width="1200" height="800" fill="url(#grid)" />
+  
+  <!-- 中央光暈 -->
+  <circle cx="600" cy="400" r="400" fill="url(#radial-glow)" />
+  
+  <!-- 抽象科技線條 - 左側 -->
+  <g opacity="0.4">
+    <path d="M 100,100 L 300,150 L 200,300 L 350,350 L 250,500" fill="none" stroke="#64ffda" stroke-width="2" />
+    <path d="M 120,120 L 320,170 L 220,320 L 370,370 L 270,520" fill="none" stroke="#64ffda" stroke-width="1" />
+    <circle cx="100" cy="100" r="5" fill="#64ffda" />
+    <circle cx="300" cy="150" r="5" fill="#64ffda" />
+    <circle cx="200" cy="300" r="5" fill="#64ffda" />
+    <circle cx="350" cy="350" r="5" fill="#64ffda" />
+    <circle cx="250" cy="500" r="5" fill="#64ffda" />
+  </g>
+  
+  <!-- 抽象科技線條 - 右側 -->
+  <g opacity="0.4">
+    <path d="M 900,200 L 800,350 L 950,450 L 850,600" fill="none" stroke="#2196F3" stroke-width="2" />
+    <path d="M 920,220 L 820,370 L 970,470 L 870,620" fill="none" stroke="#2196F3" stroke-width="1" />
+    <circle cx="900" cy="200" r="5" fill="#2196F3" />
+    <circle cx="800" cy="350" r="5" fill="#2196F3" />
+    <circle cx="950" cy="450" r="5" fill="#2196F3" />
+    <circle cx="850" cy="600" r="5" fill="#2196F3" />
+  </g>
+  
+  <!-- 浮動粒子效果 -->
+  <g opacity="0.6">
+    <circle cx="150" cy="150" r="2" fill="#ffffff" />
+    <circle cx="350" cy="250" r="1" fill="#ffffff" />
+    <circle cx="550" cy="150" r="2" fill="#ffffff" />
+    <circle cx="750" cy="250" r="1" fill="#ffffff" />
+    <circle cx="950" cy="150" r="2" fill="#ffffff" />
+    <circle cx="250" cy="350" r="1" fill="#ffffff" />
+    <circle cx="450" cy="450" r="2" fill="#ffffff" />
+    <circle cx="650" cy="550" r="1" fill="#ffffff" />
+    <circle cx="850" cy="450" r="2" fill="#ffffff" />
+    <circle cx="150" cy="550" r="1" fill="#ffffff" />
+    <circle cx="350" cy="650" r="2" fill="#ffffff" />
+    <circle cx="550" cy="750" r="1" fill="#ffffff" />
+    <circle cx="750" cy="650" r="2" fill="#ffffff" />
+    <circle cx="950" cy="550" r="1" fill="#ffffff" />
+  </g>
+  
+  <!-- GPU圖形圖示 -->
+  <g transform="translate(600, 400) scale(0.2) translate(-256, -256)">
+    <path d="M462.6,256.1c0-11.7-9.5-21.2-21.2-21.2H290.6c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V256.1z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M462.6,149.6c0-11.7-9.5-21.2-21.2-21.2H290.6c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V149.6z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M462.6,362.7c0-11.7-9.5-21.2-21.2-21.2H290.6c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V362.7z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M183.9,256.1c0-11.7-9.5-21.2-21.2-21.2H12c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V256.1z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M183.9,149.6c0-11.7-9.5-21.2-21.2-21.2H12c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V149.6z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M183.9,362.7c0-11.7-9.5-21.2-21.2-21.2H12c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2h150.8
+    c11.7,0,21.2-9.5,21.2-21.2V362.7z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M323.2,42c0-11.7-9.5-21.2-21.2-21.2H151.2c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2H302
+    c11.7,0,21.2-9.5,21.2-21.2V42z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+    <path d="M323.2,469.2c0-11.7-9.5-21.2-21.2-21.2H151.2c-11.7,0-21.2,9.5-21.2,21.2v85c0,11.7,9.5,21.2,21.2,21.2H302
+    c11.7,0,21.2-9.5,21.2-21.2V469.2z" fill="none" stroke="#64ffda" stroke-width="8" opacity="0.7"/>
+  </g>
+</svg>

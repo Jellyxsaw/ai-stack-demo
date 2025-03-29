@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- 使用相同的背景 -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2027" />
+      <stop offset="50%" stop-color="#203A43" />
+      <stop offset="100%" stop-color="#2C5364" />
+    </linearGradient>
+    
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#2c97d4" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    
+    <radialGradient id="radial-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#2196F3" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#2196F3" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- 卡片陰影 -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景矩形 -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)" />
+  <rect width="1200" height="800" fill="url(#grid)" />
+  <circle cx="600" cy="400" r="400" fill="url(#radial-glow)" />
+  
+  <!-- 頂部導航欄 -->
+  <rect x="0" y="0" width="1200" height="70" fill="#0a192f" opacity="0.9" />
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#64ffda">GPU資源配置推薦系統</text>
+  
+  <!-- 導航選項 -->
+  <text x="650" y="45" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">首頁</text>
+  <text x="750" y="45" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">硬體配置</text>
+  <text x="880" y="45" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">計算任務</text>
+  <text x="1000" y="45" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">系統指標</text>
+  <text x="1120" y="45" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">說明</text>
+  
+  <!-- 側邊欄 -->
+  <rect x="0" y="70" width="240" height="730" fill="#0a192f" opacity="0.8" />
+  
+  <!-- 側邊欄菜單項 -->
+  <rect x="20" y="100" width="200" height="50" rx="5" ry="5" fill="#64ffda" opacity="0.2" />
+  <text x="45" y="130" font-family="Arial, sans-serif" font-size="16" fill="#64ffda">儀表板</text>
+  
+  <text x="45" y="190" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">硬體管理</text>
+  <text x="45" y="240" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">任務提交</text>
+  <text x="45" y="290" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">配置推薦</text>
+  <text x="45" y="340" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">性能監控</text>
+  <text x="45" y="390" font-family="Arial, sans-serif" font-size="16" fill="#8892b0">系統設置</text>
+  
+  <!-- 用戶信息 -->
+  <circle cx="55" cy="700" r="20" fill="#64ffda" opacity="0.8" />
+  <text x="90" y="705" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">管理員</text>
+  
+  <!-- 主要內容區域 -->
+  <rect x="270" y="100" width="900" height="80" rx="10" ry="10"

@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+.idea
+.vscode
+**/node_modules
+**/target
+**/dist
+**/.mvn
+**/*.md
+**/logs
+**/*.log 
