@@ -13,7 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,  // 改為 false
 
     /* Linting */
     "strict": true,
