@@ -19,9 +19,16 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
-    - name: Build and push
+    - name: Build and push backend
       uses: docker/build-push-action@v4
       with:
         context: .
         push: true
-        tags: jellychang/ai-stack-demo:latest
+        tags: jellychang/ai-stack-demo-backend:latest
+    
+    - name: Build and push frontend
+      uses: docker/build-push-action@v4
+      with:
+        context: ./frontend
+        push: true
+        tags: jellychang/ai-stack-demo-frontend:latest
