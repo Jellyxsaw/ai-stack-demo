@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: 您的用戶名/倉庫名:latest
+        tags: jellychang/ai-stack-demo:latest
