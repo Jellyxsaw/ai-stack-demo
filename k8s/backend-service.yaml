@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  labels:
+    app: ai-stack-backend
+spec:
+  selector:
+    app: ai-stack-backend
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  type: ClusterIP 

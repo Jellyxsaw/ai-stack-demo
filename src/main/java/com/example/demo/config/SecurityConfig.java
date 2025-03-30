@@ -49,7 +49,9 @@ public class SecurityConfig {
         "/swagger-resources/**", 
         "/webjars/**",
         "/favicon.ico",
-        "/error"
+        "/error",
+        "/actuator/**",  // actuator端點
+        "/api/health/**" // 自定義健康檢查端點
     };
 
     @Bean

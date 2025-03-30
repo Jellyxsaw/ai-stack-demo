@@ -6,7 +6,7 @@ server:
 spring:
   # 資料庫配置
   datasource:
-    url: jdbc:postgresql://13.55.54.92:5432/aram
+    url: jdbc:postgresql://3.25.153.239:5432/aram
     username: jelly
     password: pinky030566
     driver-class-name: org.postgresql.Driver
@@ -56,10 +56,21 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,metrics,prometheus
+        include: health,metrics,prometheus,info
+      base-path: /actuator
   endpoint:
     health:
       show-details: always
+      probes:
+        enabled: true  # 啟用Kubernetes探針支持
+      group:
+        readiness:
+          include: db,diskSpace
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
 
 # OpenAPI Configuration
 springdoc:
