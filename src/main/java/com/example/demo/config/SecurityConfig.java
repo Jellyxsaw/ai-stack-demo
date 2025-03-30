@@ -38,6 +38,7 @@ public class SecurityConfig {
     // 定義需要允許的路徑
     private static final String[] WHITELIST_PATHS = {
         "/api/v1/auth/**", 
+        "/v1/auth/**",  // 添加这个路径确保与JwtRequestFilter一致
         "/api-docs/**", 
         "/api-docs",
         "/v3/api-docs/**", 
