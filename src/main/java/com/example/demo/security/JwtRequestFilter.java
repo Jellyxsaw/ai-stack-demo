@@ -28,6 +28,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     // 定義不需要過濾的路徑列表（使用常量以保持一致性）
     private static final List<String> EXCLUDED_PATHS = Arrays.asList(
         "/api/v1/auth/",
+        "/v1/auth/",
         "/api-docs",
         "/api-docs/",
         "/v3/api-docs",
@@ -87,23 +88,28 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         }
     
         String path = request.getServletPath();
+        
+        // 针对健康检查请求特殊处理，不记录详细日志
+        if (path.equals("/actuator/health")) {
+            chain.doFilter(request, response);
+            return;
+        }
+        
         logger.debug("JwtRequestFilter 處理請求路徑: " + path);
     
+        // 记录所有请求头，不仅限于调试模式
+        logger.info("===== 請求頭信息開始 =====");
+        java.util.Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String headerName = headerNames.nextElement();
+            logger.info(headerName + ": " + request.getHeader(headerName));
+        }
+        logger.info("===== 請求頭信息結束 =====");
+        
         final String authorizationHeader = request.getHeader("Authorization");
     
         String username = null;
         String jwt = null;
-    
-        // 記錄請求頭（僅在調試模式下）
-        if (logger.isDebugEnabled()) {
-            java.util.Enumeration<String> headerNames = request.getHeaderNames();
-            while (headerNames.hasMoreElements()) {
-                String headerName = headerNames.nextElement();
-                logger.debug(headerName + ": " + request.getHeader(headerName));
-            }
-        }
-    
-        logger.debug("Authorization Header: " + authorizationHeader);
     
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwt = authorizationHeader.substring(7);
