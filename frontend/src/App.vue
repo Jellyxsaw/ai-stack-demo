@@ -2,20 +2,29 @@
   <router-view v-if="!authStore.isAuthenticated" />
   
   <div v-else class="app-layout">
-    <header class="app-header bg-gray-800 text-white shadow-md py-3 px-6 border-b border-gray-700">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-          <h1 class="text-xl font-bold text-white">GPU 配置管理系統</h1>
+    <div class="app-header fixed top-0 left-0 right-0 z-50 bg-gray-800/80 backdrop-blur-md border-b border-gray-700">
+      <div class="flex items-center justify-between h-[60px] px-6">
+        <div class="flex items-center">
+          <router-link to="/dashboard" class="text-xl font-bold text-white hover:text-blue-400 transition-colors">
+            GPU 配置管理系統
+          </router-link>
         </div>
-        <div class="flex items-center space-x-3">
-          <div class="text-gray-200">歡迎, <span class="font-medium">{{ authStore.username }}</span></div>
-          <el-button type="info" @click="handleLogout" size="small">登出</el-button>
+        
+        <div class="flex items-center">
+          <el-button 
+            type="info" 
+            @click="handleLogout" 
+            size="small"
+            class="hover:bg-gray-600 transition-colors"
+          >
+            登出
+          </el-button>
         </div>
       </div>
-    </header>
+    </div>
     
     <div class="app-main">
-      <aside class="app-sidebar bg-gray-800 border-r border-gray-700">
+      <aside class="app-sidebar fixed left-0 top-[60px] bottom-0 bg-gray-800/95 backdrop-blur-md border-r border-gray-700">
         <nav class="py-4">
           <div class="px-4 mb-4 text-gray-400 text-sm font-medium">主菜單</div>
           <router-link to="/dashboard" class="sidebar-item" active-class="sidebar-item-active">
@@ -57,57 +66,45 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
-  background-color: #1a202c;
-  color: #e2e8f0;
+  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
 }
 
 .app-layout {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  padding-top: 60px;
 }
 
 .app-header {
-  height: 60px;
-  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .app-main {
   display: flex;
-  flex: 1;
-}
-
-.no-header {
-  margin-top: 0;
+  min-height: calc(100vh - 60px);
 }
 
 .app-sidebar {
   width: 200px;
-  min-width: 200px;
-  transition: all 0.3s;
+  z-index: 40;
 }
 
 .app-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 20px;
-}
-
-.full-width {
-  padding: 0;
+  margin-left: 200px;
+  padding: 24px;
+  width: calc(100% - 200px);
+  min-height: calc(100vh - 60px);
+  background-color: transparent;
 }
 
 .sidebar-item {
   display: flex;
   align-items: center;
   padding: 10px 16px;
-  margin-bottom: 4px;
+  margin: 4px 8px;
   color: #cbd5e0;
   text-decoration: none;
-  border-radius: 4px;
-  margin-left: 8px;
-  margin-right: 8px;
-  transition: all 0.2s;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .sidebar-item:hover {
@@ -123,5 +120,26 @@ body {
 
 .sidebar-item .el-icon {
   margin-right: 8px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .app-sidebar {
+    transform: translateX(-200px);
+  }
+  
+  .app-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .app-layout.sidebar-open .app-sidebar {
+    transform: translateX(0);
+  }
+  
+  .app-layout.sidebar-open .app-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
 }
 </style>

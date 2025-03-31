@@ -118,11 +118,12 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 logger.debug("提取的用戶名: " + username);
             } catch (Exception e) {
                 logger.error("JWT 驗證失敗: " + e.getMessage(), e);
-                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT Token");
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid JWT Token: " + e.getMessage());
                 return;
             }
         } else {
-            logger.warn("授權頭不存在或格式不正確");
+            logger.warn("授權頭不存在或格式不正確，請求路徑: " + path);
+            logger.warn("Authorization頭值: " + authorizationHeader);
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Authorization header is missing or invalid");
             return;
         }
